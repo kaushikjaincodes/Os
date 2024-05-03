@@ -1,0 +1,95 @@
+.con{
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    /* padding-bottom: 30px; */
+}
+
+.card{
+    height: 70vh;
+    width: 20vw;
+    background-color: antiquewhite;
+    color: rgb(53, 55, 75);
+    border-radius: 14px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.para{
+    opacity: 0;
+    /* font-family: "Tektur", sans-serif; */
+    font-family: consolas;
+    font-size: 15px;
+}
+.hatao{
+    text-decoration: none;
+    color: rgb(53, 55, 75);
+}
+
+.text{
+    position: relative;
+    top: 45%;
+    margin-left: 38%;
+    font-family: consolas;
+}
+
+.text1{
+    position: relative;
+    top: 45%;
+    left: 5%;
+    font-family: consolas;
+}
+
+.card:hover{
+    background-color: rgb(236, 223, 204);
+}
+.card:hover .text{
+    animation: text 1s forwards;
+
+}
+
+.card:hover .text1{
+    animation: text1 1.5s forwards;
+}
+
+.card:hover .para{
+    animation: para 4s forwards;
+}
+
+@keyframes text {
+    0%{
+        top:45%;
+        margin-left:38%;
+    }
+
+    100%{
+        top:0%;
+        margin-left: 0%;
+    }
+}
+
+@keyframes text1 {
+    0%{
+        top:45%;
+        left:5%;
+        right: 0%;
+    }
+
+    100%{
+        top:0%;
+        left: 0%;
+        right: 10%;
+    }
+}
+
+@keyframes para {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+

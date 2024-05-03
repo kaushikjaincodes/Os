@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CLOOK</title>
+    <link rel="stylesheet" href="Clook.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <h1>C-LOOK Disk Scheduling Algorithm</h1>
+      <p>
+        Determine the initial position of the disk head. Sort the pending disk
+        requests in the order in which they will be serviced with respect to the
+        current head position. Scan the disk in the chosen direction, servicing
+        requests as they are encountered. When the last request in the current
+        direction has been serviced, immediately return to the beginning of the
+        disk and repeat the process.
+      </p>
+    </div>
+    <div class="line"></div>
+    <div class="temp">
+      <label for="input">Track Index:</label>
+      <input type="number" id="input" min="0" />
+      <button class="addTrack">add</button>
+      <label for="head">Head Position:</label>
+      <input type="number" id="head" min="0" />
+      <button class="forHead">Enter</button>
+      <label for="Direction">Direction(0 for l,1 for r):</label>
+      <input type="number" id="direction" />
+      <button class="fordirection">Put</button>
+    </div>
+    <div class="sqc">Input sequence values:</div>
+    <div class="hv">Head Value:</div>
+    <div class="di">Direction:</div>
+    <div class="submit">
+      <button class="sub">Submit</button>
+    </div>
+    <div class="hidden">
+      <div class="seekops">Total Number of Seek Operations:</div>
+      <div class="seekseq">Seek Sequence:</div>
+    </div>
+    <div class="hidden" id="show">
+      <div id="so">Total Number of Seek Operations:</div>
+      <div id="seq">Seek Sequence:</div>
+    </div>
+    <div class="hidden" id="uml">
+      <canvas
+        id="myChart"
+        style="
+          width: 100%;
+          max-width: 700px;
+          background-color: white;
+          margin-left: 390px;
+          margin-top: 20px;
+          color: rgb(236, 223, 204);
+        "
+      ></canvas>
+    </div>
+    <script src="clook.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  </body>
+</html>

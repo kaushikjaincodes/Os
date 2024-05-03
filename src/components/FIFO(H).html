@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="FIFO.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <h1>FIFO Page Replacement Algorithm</h1>
+      <p>
+        For each page reference: Check if the page exists in the queue If true:
+        continue Else: Check if appending the page in queue will overflow the
+        queue If true: Remove the first page in queue Add page to the rear of
+        the queue
+      </p>
+    </div>
+    <div class="line"></div>
+    <div class="temp">
+      <label for="input">Page Sequence:</label>
+      <input type="number" id="input" min="0" />
+      <button class="addTrack">add</button>
+      <label for="head">Queue Size:</label>
+      <input type="number" id="head" min="0" />
+      <button class="forHead">Enter</button>
+    </div>
+    <div class="sqc">Page sequence values:</div>
+    <div class="hv">Queue Size :</div>
+    <div class="submit">
+      <button class="sub">Submit</button>
+    </div>
+    <div class="hidden" id="show">
+      <div class="seekseq"></div>
+    </div>
+    <div class="hidden" id="remove">
+      <div class="flex hidden">
+        <div class="content-table">
+          <table id="dataTable">
+            <thead>
+              <tr>
+                <th>Page</th>
+                <th>Hit/miss</th>
+                <th>Queue</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="FIFO.js"></script>
+  </body>
+</html>

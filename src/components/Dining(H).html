@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Dining.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <h1>Dining Philosopher Problem Using Semaphores</h1>
+      <p>
+        Initialize the semaphores for each fork to 1 (indicating that they are
+        available). Initialize a binary semaphore (mutex) to 1 to ensure that
+        only one philosopher can attempt to pick up a fork at a time. For each
+        philosopher, create a separate thread that executes the following
+        algorithm: While true: Think for a random amount of time. Acquire the
+        mutex semaphore to ensure that only one philosopher can attempt to pick
+        up a fork at a time. Attempt to acquire the semaphore for the fork to
+        the left. If successful, attempt to acquire the semaphore for the fork
+        to the right. If both forks are acquired successfully, eat for a random
+        amount of time and then release both semaphores in the same order. Then
+        release the mutex semaphore and go back to thinking.
+      </p>
+    </div>
+    <div class="line"></div>
+    <div class="p-1">
+      <label for="processes">Number of Philosphers:</label>
+      <input
+        type="number"
+        id="phils"
+        min="4"
+        step="1"
+        value="1"
+        class="py-2 px-4 rounded-full"
+      />
+      <button id="simulate">Simulate</button>
+    </div>
+    <div class="grid">
+      <div class="p-5" id="philosophers-container"></div>
+    </div>
+    <script src="Dinning(H).js"></script>
+  </body>
+</html>

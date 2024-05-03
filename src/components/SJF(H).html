@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SJF</title>
+    <link rel="stylesheet" href="SJF.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <h1>SJF-Shortest Job First Process scheduling Algorithm</h1>
+      <p>
+        The user generated list of processes is passed to the scheduler when the
+        SJF scheduler is invoked. The process are then sorted in increasing
+        order of arrival time. Until all the processes are not finished, at each
+        clock cycle, the whole list of processes is sampled and if there are any
+        new arrivals, they are added to the queue which is sorted in increasing
+        order of burst time. The first element of the queue is always processed
+        first, hence the name Shortest Job First. If the queue is non-empty,
+        then the remaining time of the first processes is decremented at each
+        clock cycle. As soon as the first element of the queue is completely
+        processed, its resultant attributes are calculated, the Gantt Chart
+        entry is made, and the element is popped from the queue. If the queue is
+        empty, the clock simply moves on to the next clock cycle. This procedure
+        is repeated until all the process are finished executing.
+      </p>
+    </div>
+    <div class="line"></div>
+    <div class="temp">
+      <label for="pid">Process id:</label>
+      <input type="text" id="pid">
+      <label for="arrival">Arrival time:</label>
+      <input type="number" id="arrival">
+      <label for="burst">Burst time:</label>
+      <input type="number" id="burst">
+      <button class="send">create</button>
+    </div>
+    <div class="hidden" id="segment">
+      <div class="bas">
+        <div>Process ID</div>
+        <div>Arrival Time</div>
+        <div>Burst Time</div>
+      </div>
+      
+      <div class="cardcont">
+        <!-- yaha processes ke naam ayengay -->
+      </div>   
+    </div>
+    <div id="newb">
+      <button class="banao hidden" id="he">Schedule</button>
+    </div>
+    <div class="hidden" id="jio">
+      <div class="sch">
+        <div>Process ID</div>
+        <div>Arrival Time</div>
+        <div> Burst Time </div>
+        <div>Completion Time</div>
+        <div>Turn around Time</div>
+        <div>Waiting Time</div>
+      </div>
+      <div class="process">
+        <!-- yaha solved wale ayengay -->
+      </div>
+    <!-- </div>
+      <div class="gc">
+        |  P1    |   P2   |  P3   |  P4   | 
+      </div>-->
+
+    </div>
+    <div class="hidden" id="ho">
+    <div id="gant">
+      Gantt:
+      </div>
+    </div>
+      <script src="SJF.JS"></script>
+  </body>
+</html>

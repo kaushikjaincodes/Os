@@ -1,0 +1,79 @@
+*{
+    margin: 10px;
+    padding: 0;
+    background-color: rgb(53, 55, 75);
+    color: rgb(236, 223, 204);
+    font-family: consolas;
+}
+.p-5{
+    display: grid;
+
+}
+
+#simulate{
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(53, 55, 75);
+    background-color: rgb(236, 223, 204);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3
+}
+
+.philosopher {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.philosopher div {
+    width: 150px;
+    height: 100px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#phils{
+    background-color: rgb(236, 223, 204);
+    border: none;
+    color:rgb(53, 55, 75) ;
+    border-style:double;
+    font-size: 20px;
+}
+.eating {
+    background-color: burlywood;
+    color: black;
+}
+.thinking {
+    background-color:darkolivegreen ;
+    color: white;
+}
+.waiting {
+    background-color: orangered;
+    color: white;
+}
+.line{
+    position: relative;
+    left: 1%;
+    width: 90vw;
+    height: 1px;
+    border-radius: 15px;
+    background-color:rgb(236, 223, 204) ;
+    margin: 10px 0;
+}
+
+/* .nav{
+  
+    height: 20vh;
+    color: rgb(236, 223, 204);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+} */
